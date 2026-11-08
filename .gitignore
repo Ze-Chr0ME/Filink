@@ -1,0 +1,16 @@
+# Scratch
+.tmp/
+
+# Rust
+pc/target/
+
+# Android / Gradle
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+*.aab
+.idea/
+*.iml

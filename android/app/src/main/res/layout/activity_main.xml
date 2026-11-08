@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accent"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DroidTransfer"
+            android:textColor="#FFFFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/myName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.85"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/wifiWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="12dp"
+                android:text="Not connected to Wi-Fi. Join the same Wi-Fi network as your PC."
+                android:textColor="@color/danger"
+                android:visibility="gone" />
+
+            <!-- Background receive -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Receive in background"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/receiveHint"
+                        style="@style/Weak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your PC can send files even when this app is closed" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/receiveSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- PCs -->
+            <TextView
+                style="@style/Section"
+                android:text="Computers" />
+
+            <LinearLayout
+                android:id="@+id/pcList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/pcEmpty"
+                style="@style/Weak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:text="Searching for PCs on this Wi-Fi…\nStart DroidTransfer on your computer." />
+
+            <!-- Send -->
+            <TextView
+                android:id="@+id/sendTitle"
+                style="@style/Section"
+                android:text="Send" />
+
+            <LinearLayout
+                android:id="@+id/sendCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnFiles"
+                        style="@style/ActionButton"
+                        android:text="Files" />
+
+                    <Button
+                        android:id="@+id/btnFolder"
+                        style="@style/ActionButton"
+                        android:layout_marginStart="6dp"
+                        android:text="Folder" />
+
+                    <Button
+                        android:id="@+id/btnClipboard"
+                        style="@style/ActionButton"
+                        android:layout_marginStart="6dp"
+                        android:text="Clipboard" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/textInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Text or link to send"
+                        android:inputType="textMultiLine|textUri"
+                        android:maxLines="5" />
+
+                    <Button
+                        android:id="@+id/btnSendText"
+                        style="@android:style/Widget.Material.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Transfers -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Section"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Transfers" />
+
+                <TextView
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:text="Clear"
+                    android:textColor="@color/accent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transferList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/transferEmpty"
+                style="@style/Weak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nothing yet. Use Share → DroidTransfer from any app, too." />
+
+            <!-- Texts -->
+            <TextView
+                android:id="@+id/textsTitle"
+                style="@style/Section"
+                android:text="Text &amp; links"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/textList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
