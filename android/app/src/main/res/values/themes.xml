@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#2E7D5B</color>
+    <color name="accent_soft">#1F2E7D5B</color>
+    <color name="online">#3CB371</color>
+    <color name="offline">#9A9A9A</color>
+    <color name="danger">#C63C3C</color>
+    <color name="card">#FFF6F7F6</color>
+    <color name="card_stroke">#FFE2E5E3</color>
+    <color name="text_weak">#FF6B6F6D</color>
+    <color name="bg">#FFFFFFFF</color>
+
+    <style name="Theme.DroidTransfer" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/accent</item>
+        <item name="android:colorPrimaryDark">@color/accent</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/accent</item>
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+
+    <style name="Theme.DroidTransfer.Share" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="Section">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="Weak">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_weak</item>
+    </style>
+
+    <style name="ActionButton" parent="@android:style/Widget.Material.Button.Colored">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
